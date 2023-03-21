@@ -9,9 +9,7 @@ import SwiftUI
 
 struct PostView: View {
     
-    let profile: Profile
-    let location: String
-    let imageURL: URL
+    let post: Post
     
     // 💡 Mettre TOUTES ses variables d'état en private
     @State private var isLiked: Bool = false
@@ -20,7 +18,7 @@ struct PostView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack(spacing: 16) {
-                AsyncImage(url: profile.pictureURL) { image in
+                AsyncImage(url: post.profile.pictureURL) { image in
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -33,13 +31,13 @@ struct PostView: View {
                 .clipShape(Circle())
                 
                 VStack(alignment: .leading) {
-                    Text(profile.name)
+                    Text(post.profile.name)
                         .bold()
-                    Text(location)
+                    Text(post.location)
                 }
             }
             .padding(.horizontal)
-            AsyncImage(url: imageURL) { image in
+            AsyncImage(url: post.imageURL) { image in
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -66,10 +64,6 @@ struct PostView: View {
 
 struct PostView_Previews: PreviewProvider {
     static var previews: some View {
-        PostView(
-            profile: .preview1,
-            location: "Paris",
-            imageURL: URL(string: "https://images.pexels.com/photos/15954328/pexels-photo-15954328.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")!
-        )
+        PostView(post: .preview2)
     }
 }
