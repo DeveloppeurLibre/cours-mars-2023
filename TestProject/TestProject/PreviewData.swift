@@ -1,0 +1,22 @@
+//
+//  PreviewData.swift
+//  TestProject
+//
+//  Created by Quentin Cornu on 21/03/2023.
+//
+
+import Foundation
+
+extension Profile {
+    static let preview1 = Profile(
+        name: "Quentin (preview 2)",
+        title: "Autre Développeur",
+        url: URL(string: "https://google.com")
+    )
+    
+    static let preview2 = Profile(
+        name: "Quentin (preview)",
+        title: "Développeur",
+        description: "Ceci  est une longue description sur plusieurs lignes Ceci est une longue description sur plusieurs lignes Ceci est une longue description sur plusieurs lignes"
+    )
+}
