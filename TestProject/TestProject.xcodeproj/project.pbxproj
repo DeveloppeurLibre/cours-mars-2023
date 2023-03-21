@@ -13,7 +13,8 @@
 		64517C4D29C89BD100F4687B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64517C4C29C89BD100F4687B /* Preview Assets.xcassets */; };
 		646E51B329C9BEBB0023D116 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E51B229C9BEBB0023D116 /* Profile.swift */; };
 		646E51B529C9C5E00023D116 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E51B429C9C5E00023D116 /* PreviewData.swift */; };
-		646E51B729C9CE130023D116 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E51B629C9CE130023D116 /* LikeButton.swift */; };
+		646E51B729C9CE130023D116 /* ActivableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E51B629C9CE130023D116 /* ActivableButton.swift */; };
+		646E51B929C9EA980023D116 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646E51B829C9EA980023D116 /* PostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +25,8 @@
 		64517C4C29C89BD100F4687B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		646E51B229C9BEBB0023D116 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		646E51B429C9C5E00023D116 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
-		646E51B629C9CE130023D116 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		646E51B629C9CE130023D116 /* ActivableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivableButton.swift; sourceTree = "<group>"; };
+		646E51B829C9EA980023D116 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +61,10 @@
 			children = (
 				64517C4529C89BCF00F4687B /* TestProjectApp.swift */,
 				64517C4729C89BCF00F4687B /* HeaderView.swift */,
-				646E51B629C9CE130023D116 /* LikeButton.swift */,
+				646E51B629C9CE130023D116 /* ActivableButton.swift */,
 				646E51B229C9BEBB0023D116 /* Profile.swift */,
 				646E51B429C9C5E00023D116 /* PreviewData.swift */,
+				646E51B829C9EA980023D116 /* PostView.swift */,
 				64517C4929C89BD100F4687B /* Assets.xcassets */,
 				64517C4B29C89BD100F4687B /* Preview Content */,
 			);
@@ -149,7 +152,8 @@
 				646E51B529C9C5E00023D116 /* PreviewData.swift in Sources */,
 				64517C4829C89BCF00F4687B /* HeaderView.swift in Sources */,
 				646E51B329C9BEBB0023D116 /* Profile.swift in Sources */,
-				646E51B729C9CE130023D116 /* LikeButton.swift in Sources */,
+				646E51B729C9CE130023D116 /* ActivableButton.swift in Sources */,
+				646E51B929C9EA980023D116 /* PostView.swift in Sources */,
 				64517C4629C89BCF00F4687B /* TestProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

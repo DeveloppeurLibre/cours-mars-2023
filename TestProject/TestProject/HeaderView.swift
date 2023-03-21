@@ -15,12 +15,11 @@ struct HeaderView: View {
     let profile: Profile
     
     @State var showMore = false
-    
+
     // Tout est rendu dans la variable body
     var body: some View {
         VStack(alignment: .leading) {
             // Image + stats
-            
             HStack {
                 ZStack {
                     Image("landscape")
@@ -95,6 +94,8 @@ struct HeaderView_Previews: PreviewProvider {
     
     static var previews: some View {
         HeaderView(profile: .preview1)
+            .previewLayout(.sizeThatFits)
         HeaderView(profile: .preview2)
+            .previewLayout(.sizeThatFits)
     }
 }
