@@ -11,7 +11,8 @@ import SwiftUI
 struct TestProjectApp: App {
     var body: some Scene {
         WindowGroup {
-            HeaderView(profile: .preview2)
+//            HeaderView(profile: .preview2)
+            HierarchicalNavigationExample()
         }
     }
 }
