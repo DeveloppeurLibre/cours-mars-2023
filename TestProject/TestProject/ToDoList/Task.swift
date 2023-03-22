@@ -7,9 +7,13 @@
 
 import Foundation
 
-struct Task: Identifiable {
+// 1 - Ajouter le protocole ObservableObject à l'object
+//     (qui doit être une class)
+// 2 - Publier autant de propriétés qu'on veut avec @Published
+
+class Task: Identifiable, ObservableObject {
     let id = UUID()
-    let name: String
+    @Published var name: String
     let dueDate: Date?
     let priority: Priority?
     

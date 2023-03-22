@@ -7,16 +7,30 @@
 
 import SwiftUI
 
+class TaskData: ObservableObject {
+    @Published var tasks: [Task]
+    
+    init(tasks: [Task]) {
+        self.tasks = tasks
+    }
+}
+
 struct TaskList: View {
     
     // MARK: State properties
     @State private var isShowingNewTaskView = false
-    @State private var tasks: [Task] = []
+    @StateObject var taskData: TaskData = TaskData(tasks: Task.previewTasks)
     
     var body: some View {
-        List {
-            ForEach(tasks) { task in
-                Text(task.name)
+        NavigationView {
+            List {
+                ForEach(taskData.tasks) { task in
+                    NavigationLink {
+                        TaskDetailView(task: task)
+                    } label: {
+                        TaskCell(task: task)
+                    }
+                }
             }
         }
         .overlay(alignment: .bottomTrailing) {
@@ -37,7 +51,7 @@ struct TaskList: View {
             .padding()
         }
         .sheet(isPresented: $isShowingNewTaskView) {
-            NewTaskView(tasksList: $tasks)
+            NewTaskView(tasksList: $taskData.tasks)
         }
     }
 }
