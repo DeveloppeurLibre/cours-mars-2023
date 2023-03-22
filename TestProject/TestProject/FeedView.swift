@@ -15,6 +15,7 @@ struct FeedView: View {
         ScrollView {
             ForEach(posts) { post in
                 PostView(post: post)
+                    
                 Divider()
             }
         }
