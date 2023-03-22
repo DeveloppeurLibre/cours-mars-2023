@@ -9,7 +9,9 @@ import SwiftUI
 
 struct TaskList: View {
     
-    let tasks: [Task]
+    // MARK: State properties
+    @State private var isShowingNewTaskView = false
+    @State private var tasks: [Task] = []
     
     var body: some View {
         List {
@@ -18,23 +20,30 @@ struct TaskList: View {
             }
         }
         .overlay(alignment: .bottomTrailing) {
-            Image(systemName: "plus")
-                .font(.title)
-                .bold()
-                .foregroundColor(.white)
-                .padding()
-                .background(
-                    Circle()
-                        .foregroundColor(.blue)
-                )
-                .shadow(radius: 10, y: 5)
-                .padding()
+            Button {
+                isShowingNewTaskView = true
+            } label: {
+                Image(systemName: "plus")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(
+                        Circle()
+                            .foregroundColor(.blue)
+                    )
+                    .shadow(radius: 10, y: 5)
+            }
+            .padding()
+        }
+        .sheet(isPresented: $isShowingNewTaskView) {
+            NewTaskView(tasksList: $tasks)
         }
     }
 }
 
 struct TaskList_Previews: PreviewProvider {
     static var previews: some View {
-        TaskList(tasks: Task.previewTasks)
+        TaskList()
     }
 }

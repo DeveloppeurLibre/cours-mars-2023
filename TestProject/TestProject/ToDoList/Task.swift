@@ -19,10 +19,10 @@ struct Task: Identifiable {
         self.priority = priority
     }
     
-    enum Priority {
-        case high
-        case normal
-        case low
+    enum Priority: String {
+        case high = "Haute"
+        case normal = "Normale"
+        case low = "Basse"
     }
 }
 
@@ -34,3 +34,4 @@ extension Task {
         Task(name: "Finir le rapport", priority: .low)
     ]
 }
+
