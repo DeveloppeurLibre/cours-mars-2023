@@ -16,6 +16,7 @@
 		644F2E9D29CB50CB00C9D058 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 644F2E9C29CB50CB00C9D058 /* Kingfisher */; };
 		644F2E9F29CB5AAB00C9D058 /* PopularMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F2E9E29CB5AAB00C9D058 /* PopularMovies.swift */; };
 		644F2EA129CC4F0300C9D058 /* MoviesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F2EA029CC4F0300C9D058 /* MoviesList.swift */; };
+		644F2EA329CC56FE00C9D058 /* TestHttpRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F2EA229CC56FE00C9D058 /* TestHttpRequestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		644F2E9929CB4EF900C9D058 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		644F2E9E29CB5AAB00C9D058 /* PopularMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovies.swift; sourceTree = "<group>"; };
 		644F2EA029CC4F0300C9D058 /* MoviesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesList.swift; sourceTree = "<group>"; };
+		644F2EA229CC56FE00C9D058 /* TestHttpRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHttpRequestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				644F2E9E29CB5AAB00C9D058 /* PopularMovies.swift */,
 				644F2E8D29CB445E00C9D058 /* Assets.xcassets */,
 				644F2E8F29CB445E00C9D058 /* Preview Content */,
+				644F2EA229CC56FE00C9D058 /* TestHttpRequestView.swift */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				644F2E9F29CB5AAB00C9D058 /* PopularMovies.swift in Sources */,
+				644F2EA329CC56FE00C9D058 /* TestHttpRequestView.swift in Sources */,
 				644F2E8C29CB445D00C9D058 /* RatingView.swift in Sources */,
 				644F2EA129CC4F0300C9D058 /* MoviesList.swift in Sources */,
 				644F2E9829CB4ECC00C9D058 /* MovieCellView.swift in Sources */,
