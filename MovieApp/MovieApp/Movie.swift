@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Movie {
+struct Movie: Identifiable {
+    let id = UUID()
     let title: String
     let description: String
     let posterURL: URL

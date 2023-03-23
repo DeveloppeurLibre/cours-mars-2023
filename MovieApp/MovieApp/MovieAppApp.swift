@@ -11,7 +11,7 @@ import SwiftUI
 struct MovieAppApp: App {
     var body: some Scene {
         WindowGroup {
-            RatingView(rating: 9.0)
+            PopularMovies()
         }
     }
 }
