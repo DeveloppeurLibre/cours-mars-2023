@@ -14,14 +14,17 @@ import Foundation
 // 3 - Associer chaque cas d'enum à la clé JSON correspondante
 
 struct APIMovie: Codable {
+    
     let title: String
     let description: String
     let voteAverage: Float
+    let imagePath: String
     
     enum CodingKeys: String, CodingKey {
         case title
         case description = "overview"
         case voteAverage = "vote_average"
+        case imagePath = "poster_path"
     }
 }
 

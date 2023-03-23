@@ -40,28 +40,32 @@ struct PopularMovies: View {
     }
     
     func loadMovies() {
-        moviesList.popularMovies = [
-            Movie(
-                title: "Nouveau film",
-                description: "Desceription",
-                posterURL: URL(string: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ewF3IlGscc7FjgGEPcQvZsAsgAW.jpg")!,
-                rating: 9.0
-            ),
-            Movie(
-                title: "The Mandalorian",
-                description: "Desceription",
-                posterURL: URL(string: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/s8lHYTNYM919rDFvMs33tOeMbYf.jpg")!,
-                rating: 9.0
-            ),
-            Movie(
-                title: "Nouveau film",
-                description: "Desceription",
-                posterURL: URL(string: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/r9iMNhZYFbS3HnpmobVc4dX5U8x.jpg")!,
-                rating: 9.0
-            ),
-        ]
-        // à remplir
-        // Créer X faux films -> qu'on affiche
+        Task {
+            // Fetcher les vrais popular movies
+            
+            let popularMovieURL = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=ee6b2b9e0970948e6741d6b7985191fb")!
+            
+            do {
+                let (data, _) = try await URLSession.shared.data(from: popularMovieURL)
+                
+                let moviePopularResults = try JSONDecoder().decode(MoviePopularResults.self, from: data)
+                
+                for apiMovie in moviePopularResults.results {
+                    
+                    let newMovie = Movie(
+                        title: apiMovie.title,
+                        description: apiMovie.description,
+                        posterURL: URL(string: "https://image.tmdb.org/t/p/w500/\(apiMovie.imagePath)")!,
+                        rating: apiMovie.voteAverage
+                    )
+                    
+                    moviesList.popularMovies.append(newMovie)
+                }
+                
+            } catch {
+                
+            }
+        }
     }
 }
 

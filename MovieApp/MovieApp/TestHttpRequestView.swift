@@ -25,7 +25,6 @@ struct TestHttpRequestView: View {
             } label: {
                 Text("Load movies")
             }
-
         }
     }
     
