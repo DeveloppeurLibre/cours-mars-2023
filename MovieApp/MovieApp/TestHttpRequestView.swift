@@ -21,7 +21,7 @@ struct TestHttpRequestView: View {
                 Text(title)
             }
             Button {
-                printMovieTitles()
+                loadMovies()
             } label: {
                 Text("Load movies")
             }
@@ -29,49 +29,18 @@ struct TestHttpRequestView: View {
         }
     }
     
-    func printMovieTitles() {
-        Task {
-            // 1 - Faire un appel HTTP
-            let (data, _) = try await URLSession.shared.data(from: dataURL)
-            
-            // Méthode à la main
-            do {
-                let json = try JSONSerialization.jsonObject(with: data)
-                // json est au format Any
-
-                let popularMoviesResult = json as! [String: Any]
-
-                let results = popularMoviesResult["results"] as! [Any]
-
-                for result in results {
-                    let movie = result as! [String: Any]
-                    let title = movie["title"] as! String
-                    movieTitles.append(title)
-                }
-            } catch {
-                print("❌ Erreur de serialisation")
-            }
-            
-        }
-    }
-        
     func loadMovies() {
         Task {
             let (data, _) = try await URLSession.shared.data(from: dataURL)
-            // Exécuté SEULEMENT quand on a récupéré les données
-            textContent = String(data: data, encoding: .utf8)!
             
             do {
-                let json = try JSONSerialization.jsonObject(with: data) as! [String: Any]
-            
-                let results = json["results"]
+                let moviePopularResults = try JSONDecoder().decode(MoviePopularResults.self, from: data)
                 
-                if results != nil {
-                    let resultsData = try! JSONSerialization.data(withJSONObject: results!)
-                    textContent = String(data: resultsData, encoding: .utf8)!
+                for apiMovie in moviePopularResults.results {
+                    movieTitles.append(apiMovie.title)
                 }
             } catch {
-                
+                print("❌ Erreur de décodage")
             }
         }
     }
