@@ -19,6 +19,12 @@
 		644F2EA329CC56FE00C9D058 /* TestHttpRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F2EA229CC56FE00C9D058 /* TestHttpRequestView.swift */; };
 		644F2EA729CC8EAB00C9D058 /* APIMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F2EA629CC8EAB00C9D058 /* APIMovie.swift */; };
 		644F2EA929CCAFA600C9D058 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F2EA829CCAFA600C9D058 /* MovieDetailView.swift */; };
+		644F2EAB29CDA39B00C9D058 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F2EAA29CDA39B00C9D058 /* TestView.swift */; };
+		644F2EAD29CDC3F200C9D058 /* APIMovieCast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F2EAC29CDC3F200C9D058 /* APIMovieCast.swift */; };
+		644F2EAF29CDC40800C9D058 /* APIActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F2EAE29CDC40800C9D058 /* APIActor.swift */; };
+		644F2EB129CDC41400C9D058 /* Casting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F2EB029CDC41400C9D058 /* Casting.swift */; };
+		644F2EB329CDC42000C9D058 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F2EB229CDC42000C9D058 /* Actor.swift */; };
+		644F2EB529CDC44300C9D058 /* ActorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644F2EB429CDC44300C9D058 /* ActorCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		644F2EA229CC56FE00C9D058 /* TestHttpRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHttpRequestView.swift; sourceTree = "<group>"; };
 		644F2EA629CC8EAB00C9D058 /* APIMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMovie.swift; sourceTree = "<group>"; };
 		644F2EA829CCAFA600C9D058 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
+		644F2EAA29CDA39B00C9D058 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		644F2EAC29CDC3F200C9D058 /* APIMovieCast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMovieCast.swift; sourceTree = "<group>"; };
+		644F2EAE29CDC40800C9D058 /* APIActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIActor.swift; sourceTree = "<group>"; };
+		644F2EB029CDC41400C9D058 /* Casting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Casting.swift; sourceTree = "<group>"; };
+		644F2EB229CDC42000C9D058 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		644F2EB429CDC44300C9D058 /* ActorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,12 @@
 				644F2EA229CC56FE00C9D058 /* TestHttpRequestView.swift */,
 				644F2EA629CC8EAB00C9D058 /* APIMovie.swift */,
 				644F2EA829CCAFA600C9D058 /* MovieDetailView.swift */,
+				644F2EB429CDC44300C9D058 /* ActorCell.swift */,
+				644F2EB229CDC42000C9D058 /* Actor.swift */,
+				644F2EB029CDC41400C9D058 /* Casting.swift */,
+				644F2EAE29CDC40800C9D058 /* APIActor.swift */,
+				644F2EAC29CDC3F200C9D058 /* APIMovieCast.swift */,
+				644F2EAA29CDA39B00C9D058 /* TestView.swift */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -166,12 +184,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				644F2EAF29CDC40800C9D058 /* APIActor.swift in Sources */,
 				644F2E9F29CB5AAB00C9D058 /* PopularMovies.swift in Sources */,
 				644F2EA329CC56FE00C9D058 /* TestHttpRequestView.swift in Sources */,
+				644F2EB329CDC42000C9D058 /* Actor.swift in Sources */,
 				644F2E8C29CB445D00C9D058 /* RatingView.swift in Sources */,
 				644F2EA929CCAFA600C9D058 /* MovieDetailView.swift in Sources */,
 				644F2EA729CC8EAB00C9D058 /* APIMovie.swift in Sources */,
 				644F2EA129CC4F0300C9D058 /* MoviesList.swift in Sources */,
+				644F2EB529CDC44300C9D058 /* ActorCell.swift in Sources */,
+				644F2EB129CDC41400C9D058 /* Casting.swift in Sources */,
+				644F2EAD29CDC3F200C9D058 /* APIMovieCast.swift in Sources */,
+				644F2EAB29CDA39B00C9D058 /* TestView.swift in Sources */,
 				644F2E9829CB4ECC00C9D058 /* MovieCellView.swift in Sources */,
 				644F2E9A29CB4EF900C9D058 /* Movie.swift in Sources */,
 				644F2E8A29CB445D00C9D058 /* MovieAppApp.swift in Sources */,

@@ -33,6 +33,7 @@ struct MovieCellView: View {
                 }
                 Text(movie.description)
                     .lineLimit(4)
+                    .multilineTextAlignment(.leading)
             }
         }
         .foregroundColor(.white)

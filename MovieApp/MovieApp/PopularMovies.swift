@@ -42,7 +42,17 @@ struct PopularMovies: View {
                 }
                 .background(.black)
                 .navigationTitle("Popular Movies")
+                .toolbar {
+                    ToolbarItem {
+                        Button {
+                            //
+                        } label: {
+                            Image(systemName: "star")
+                        }
+                    }
+                }
             }
+            
         }
     }
     
