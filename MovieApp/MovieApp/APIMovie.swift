@@ -15,12 +15,14 @@ import Foundation
 
 struct APIMovie: Codable {
     
+    let id: Int
     let title: String
     let description: String
     let voteAverage: Float
     let imagePath: String
     
     enum CodingKeys: String, CodingKey {
+        case id
         case title
         case description = "overview"
         case voteAverage = "vote_average"

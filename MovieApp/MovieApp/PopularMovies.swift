@@ -26,16 +26,23 @@ struct PopularMovies: View {
                 Text("Load")
             }
         } else {
-            ScrollView {
-                VStack {
-                    Text("\(moviesList.popularMovies.count) films")
-                        .foregroundColor(.white)
-                    ForEach(moviesList.popularMovies) { movie in
-                        MovieCellView(movie: movie)
+            NavigationView {
+                ScrollView {
+                    VStack {
+                        Text("\(moviesList.popularMovies.count) films")
+                            .foregroundColor(.white)
+                        ForEach(moviesList.popularMovies) { movie in
+                            NavigationLink {
+                                MovieDetailView(movie: movie)
+                            } label: {
+                                MovieCellView(movie: movie)
+                            }
+                        }
                     }
                 }
+                .background(.black)
+                .navigationTitle("Popular Movies")
             }
-            .background(.black)
         }
     }
     
@@ -53,6 +60,7 @@ struct PopularMovies: View {
                 for apiMovie in moviePopularResults.results {
                     
                     let newMovie = Movie(
+                        id: apiMovie.id,
                         title: apiMovie.title,
                         description: apiMovie.description,
                         posterURL: URL(string: "https://image.tmdb.org/t/p/w500/\(apiMovie.imagePath)")!,
